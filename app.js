@@ -18,14 +18,14 @@ app.use(express.urlencoded({extended:true}))
 const link = mysql.createConnection({
 	host: "localhost",
 	user: "root",
-	password: "Ware@2021",
+	password: "mysql password",
 	database: "links"
 });
 
 const mainDatabase = mysql.createConnection({
 	host: "localhost",
 	user : "root",
-	password:"Ware@2021",
+	password:"mysql password",
 	database : "attendance"
 })
 
@@ -151,7 +151,6 @@ app.get('/get/:db',async(req,res)=>{
 	const { db } = req.params
 	if(!db)
 	{
-
 		return res.sendFile(path.join(__dirname,'errors/error.html'))
 	}
 
